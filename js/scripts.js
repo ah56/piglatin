@@ -10,7 +10,7 @@ $(document).ready(function(){
 
 function toPigLatin(userString){
   var vowels =["a", "e", "i", "o", "u"];
-  if (vowels.includes(userString.toLowerCase())){
+  if (vowels.includes(userString[0].toLowerCase())){
     userString += "way";
   }
 
