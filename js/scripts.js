@@ -13,7 +13,14 @@ function toPigLatin(userString){
   if (vowels.includes(userString[0].toLowerCase())){
     userString += "way";
   }else {
-    userString = userString.slice(1)+userString[0]+"ay";
+    var firstVowel = userString.length;
+    vowels.forEach(function(vowel){
+      var indexVowel = userString.indexOf(vowel);
+      if (indexVowel !== -1 && indexVowel < firstVowel){
+        firstVowel = indexVowel;
+      }
+    });
+    userString = userString.slice(firstVowel)+userString.slice(0,firstVowel)+"ay";
 
   }
 
