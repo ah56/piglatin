@@ -20,8 +20,13 @@ function toPigLatin(userString){
         firstVowel = indexVowel;
       }
     });
-    userString = userString.slice(firstVowel)+userString.slice(0,firstVowel)+"ay";
+    if (userString[firstVowel -1 ].toLowerCase() === "q" && userString[firstVowel] === "u"){
+      userString  =userString.slice(firstVowel + 1) + userString.slice(0, firstVowel+1)+"ay";
+    }
+    else{
 
+      userString = userString.slice(firstVowel)+userString.slice(0,firstVowel)+"ay";
+    }
   }
 
 
