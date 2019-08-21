@@ -18,6 +18,10 @@ _This application takes user input and converts then displays it to Pig Latin_
   * Example Input: Puddle
   * Example Output: uddlePay
 
+* The program treats "y" as a consonant.
+  * Example Input: you
+  * Example Output: ouyay
+
 * The program adds "way" to the end of single-letter words beginning with a vowel.
   * Example Input: i
   * Example Output: iway
@@ -29,10 +33,6 @@ _This application takes user input and converts then displays it to Pig Latin_
 * The program moves the first letter to the end of single words beginning with a single consonant and adds "ay".
   * Example Input: cat
   * Example Output: atcay
-
-* The program moves the first letter to the end of single words starting with "y" and adds "ay".
-  * Example Input: you
-  * Example Output: ouyay
 
 * The program moves the beginning consonants to the end of single words beginning with multiple, subsequent consonants and adds "ay".
   * Example Input: charge
