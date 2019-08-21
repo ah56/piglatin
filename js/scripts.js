@@ -2,11 +2,18 @@ $(document).ready(function(){
   $("form#user-input").submit(function(event){
     event.preventDefault();
     var userInput = $("#input").val();
-    var pigLatin = toPigLatin(userInput);
-    $("span#output").text(pigLatin);
+    var finalOutput = multipleWords(userInput);
+    $("span#output").text(finalOutput);
 
   });
 });
+function multipleWords(sentence){
+  var words = sentence.split(" ");
+  var finalOutput= words.map(word => toPigLatin(word));
+  return finalOutput.join(" ");
+}
+
+
 
 function toPigLatin(userString){
   var vowels =["a", "e", "i", "o", "u"];
