@@ -12,6 +12,9 @@ function toPigLatin(userString){
   var vowels =["a", "e", "i", "o", "u"];
   if (vowels.includes(userString[0].toLowerCase())){
     userString += "way";
+  }else {
+    userString = userString.slice(1)+userString[0]+"ay";
+
   }
 
 
